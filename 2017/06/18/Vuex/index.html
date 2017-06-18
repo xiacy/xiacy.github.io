@@ -93,12 +93,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xiacy&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="#Vuex ####Vuex是什么Vuex是为Vue量身定制的一个状态管理模式和类库，它做为集中的状态容器服务于应用中所有组件，用一系列规则保证状态只能以可预测地方式改变。它也集成了Vue的官网开发工具扩展以提供高级特性，如零配置的时间旅行调试和状态快照导入/导出。 ######什么是“状态管理模式”让我们以一个简单的计数应用开始：123456789101112131415161718new Vu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vuex文档">
+<meta property="og:url" content="http://yoursite.com/2017/06/18/Vuex/index.html">
 <meta property="og:site_name" content="Xiacy&#39;s Blog">
+<meta property="og:description" content="#Vuex ####Vuex是什么Vuex是为Vue量身定制的一个状态管理模式和类库，它做为集中的状态容器服务于应用中所有组件，用一系列规则保证状态只能以可预测地方式改变。它也集成了Vue的官网开发工具扩展以提供高级特性，如零配置的时间旅行调试和状态快照导入/导出。 ######什么是“状态管理模式”让我们以一个简单的计数应用开始：123456789101112131415161718new Vu">
+<meta property="og:image" content="http://vuex.vuejs.org/en/images/flow.png">
+<meta property="og:image" content="http://vuex.vuejs.org/en/images/vuex.png">
+<meta property="og:updated_time" content="2017-06-18T09:11:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xiacy&#39;s Blog">
+<meta name="twitter:title" content="Vuex文档">
+<meta name="twitter:description" content="#Vuex ####Vuex是什么Vuex是为Vue量身定制的一个状态管理模式和类库，它做为集中的状态容器服务于应用中所有组件，用一系列规则保证状态只能以可预测地方式改变。它也集成了Vue的官网开发工具扩展以提供高级特性，如零配置的时间旅行调试和状态快照导入/导出。 ######什么是“状态管理模式”让我们以一个简单的计数应用开始：123456789101112131415161718new Vu">
+<meta name="twitter:image" content="http://vuex.vuejs.org/en/images/flow.png">
 
 
 
@@ -126,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/18/Vuex/"/>
 
 
 
 
 
-  <title>Xiacy's Blog</title>
+  <title>Vuex文档 | Xiacy's Blog</title>
   
 
 
@@ -157,9 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,9 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/18/Vuex/" itemprop="url">Vuex文档</a></h1>
+          <h1 class="post-title" itemprop="name headline">Vuex文档</h1>
         
 
         <div class="post-meta">
@@ -319,9 +322,7 @@
       
 
       
-        
-          
-            <p>#Vuex</p>
+        <p>#Vuex</p>
 <p>####Vuex是什么<br>Vuex是为Vue量身定制的一个状态管理模式和类库，它做为集中的状态容器服务于应用中所有组件，用一系列规则保证状态只能以可预测地方式改变。它也集成了Vue的官网开发工具扩展以提供高级特性，如零配置的时间旅行调试和状态快照导入/导出。</p>
 <p>######什么是“状态管理模式”<br>让我们以一个简单的计数应用开始：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="comment">// state</span></div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">count</span>: <span class="number">0</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// view</span></div><div class="line">  template: <span class="string">`</span></div><div class="line">    &lt;div&gt;&#123;&#123; count &#125;&#125;&lt;/div&gt;</div><div class="line">  `,</div><div class="line">  <span class="comment">// actions</span></div><div class="line">  methods: &#123;</div><div class="line">    increment () &#123;</div><div class="line">      <span class="keyword">this</span>.count++</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p>这是一个独立的app，它由以下几个部分组成：</p>
@@ -476,20 +477,27 @@
 <p>####热重载</p>
 <p>####API文档</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -497,21 +505,22 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -519,6 +528,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -538,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -583,6 +605,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#开发环境-vs-生产环境"><span class="nav-number">1.</span> <span class="nav-text">开发环境 vs. 生产环境</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#双向的计算函数"><span class="nav-number">2.</span> <span class="nav-text">双向的计算函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -696,10 +734,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 

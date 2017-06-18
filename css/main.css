@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #962e5b;
+  background: #ffffda;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2526,4 +2526,72 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+body {
+  background: #f5f7f9;
+}
+.container {
+  float: left;
+  width: 100%;
+}
+.header {
+  float: left;
+  width: 400px;
+}
+.header-inner {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+}
+.site-brand-wrapper,
+.site-meta,
+.custom-logo-site-title {
+  float: right;
+}
+.brand {
+  float: right;
+  height: 100px;
+  width: 150px;
+}
+.site-title {
+  line-height: 100px;
+}
+.site-nav {
+  float: right;
+  background: #fff;
+}
+.menu {
+  width: 230px;
+  margin: 20px auto;
+  padding: 0;
+  text-align: left;
+}
+.menu .menu-item {
+  display: block;
+  font-size: 18px;
+  padding: 10px 25px;
+  margin: 0;
+}
+.menu-item-active {
+  background: #f5f7f9;
+}
+.main {
+  float: left;
+}
+.main-inner {
+  float: left;
+  margin-left: 20px;
+  background: #fff;
+}
+.post-body {
+  padding: 10px 20px;
+}
+.posts-expand .post-eof {
+  width: 90%;
+  background: none;
+  border-top: 1px dotted #ccc;
 }
